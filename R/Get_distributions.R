@@ -1,4 +1,6 @@
-
+#' Just a test message
+#'
+#'
 #' @import data.table
 #' @import truncnorm
 #' @import MASS
