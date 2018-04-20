@@ -4,9 +4,14 @@
 #' @import data.table
 #' @import truncnorm
 #' @import MASS
+#' @export
 
-Get_distributions <- function(Family, Lmax.mean, Lmax.SD, n_iter=5000){
+Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, n_iter=5000){
 
+  if(is.numeric(Family_Input)){
+  Family_Names <- c("Acanthuridae","Carangidae","Haemulidae","Labridae","Lethrinidae","Lutjanidae","Mullidae","Scaridae","Serranidae","Shark")
+  Family       <- Family_Names[Family_Input]
+  } else {Family <- Family_Input}
 
   coefs <- Get_coefficients(Family, Lmax.mean)
 

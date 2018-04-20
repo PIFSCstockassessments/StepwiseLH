@@ -4,7 +4,7 @@
 \alias{Get_distributions}
 \title{Just a test message}
 \usage{
-Get_distributions(Family, Lmax.mean, Lmax.SD, n_iter = 5000)
+Get_distributions(Family_Input, Lmax.mean, Lmax.SD, n_iter = 5000)
 }
 \description{
 Just a test message
