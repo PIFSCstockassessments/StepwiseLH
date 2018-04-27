@@ -1,4 +1,5 @@
 #' @import truncnorm
+#' @export
 
 GenerateRandom <- function(n_iter, aDist, par1, par2){
 
