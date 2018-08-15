@@ -6,7 +6,7 @@
 #' @import MASS
 #' @export
 
-Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, n_iter=5000){
+Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method=0.04, n_iter=5000){
 
   if(is.numeric(Family_Input)){
   Family_Names <- c("Acanthuridae","Carangidae","Haemulidae","Labridae","Lethrinidae","Lutjanidae","Mullidae","Scaridae","Serranidae","Shark")
@@ -26,9 +26,16 @@ Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, n_iter=5000){
     A0[i]   <- coefs$A0_coef[1]
     M[i]    <- Get_randomLH(coefs$MFunc,coefs$MDist,coefs$M_coef,coefs$M_cov,coefs$M_error, K[i], Lmax[i])
     Amax[i] <- -log(0.05)/M[i]
+
+    # Select how M is calculated
+    if(is.numeric(M_method))        M[i] <- -log(M_method)/Amax[i]        # rule-of-thumb approach where M=-log(Survivorship)/Amax see Hewitt & Hoenig (2005) equation (2). Default is S=0.04 based on Nadon et al. (2015).
+    if(M_method=="Then_2014")       M[i] <- 4.899*Amax[i]^-0.916          # new equation from Then et al. (2014)
+    if(M_method=="Pauly_Then_2014") M[i] <- 4.118*K[i]^0.73*Linf[i]^-0.33 # updated Pauly (1980) equation from Then et al. (2014)
+
     LLambda <- Linf[i]*(1-exp(-K[i]*(Amax[i]-A0[i])))
     Lmat[i] <- Get_randomLH(coefs$MatFunc,coefs$MatDist,coefs$Mat_coef,coefs$Mat_cov,coefs$Mat_error, LLambda)
     Amat[i] <- A0[i]-1/K[i]*log(1-Lmat[i]/Linf[i])
+
   }
 
   Out <- data.table( cbind(Lmax,Linf,K,A0,Lmat,Amat,M,Amax) )
