@@ -19,3 +19,8 @@ GenerateRandom(n_iter, aDist, par1, par2)
 Generates random deviates. \code{aDist} determinines normal or lognormal
 distribution of the random generation function.
 }
+\seealso{
+\code{\link[truncnorm]{rtruncnorm}}
+
+\code{\link[stats]{rlnorm}}
+}
