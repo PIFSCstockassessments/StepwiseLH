@@ -1,6 +1,13 @@
 #' Just a test message
 #'
 #'
+#'
+#' @param Family_Input Selection of available family taxon.
+#' @param Lmax.mean Mean of 'largest locally measured length'.
+#' @param Lmax.SD Standard Deviation of 'largest locally measured length'.
+#' @param M_method Select how M is calculated. Default is 0.04.
+#' @param n_iter Number of obervations. Default is 5000.
+#'
 #' @import data.table
 #' @import truncnorm
 #' @import MASS
