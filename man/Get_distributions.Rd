@@ -4,7 +4,19 @@
 \alias{Get_distributions}
 \title{Just a test message}
 \usage{
-Get_distributions(Family_Input, Lmax.mean, Lmax.SD, n_iter = 5000)
+Get_distributions(Family_Input, Lmax.mean, Lmax.SD, M_method = 0.04,
+  n_iter = 5000)
+}
+\arguments{
+\item{Family_Input}{Selection of available family taxon.}
+
+\item{Lmax.mean}{Mean of 'largest locally measured length'.}
+
+\item{Lmax.SD}{Standard Deviation of 'largest locally measured length'.}
+
+\item{M_method}{Select how M is calculated. Default is 0.04.}
+
+\item{n_iter}{Number of obervations. Default is 5000.}
 }
 \description{
 Just a test message

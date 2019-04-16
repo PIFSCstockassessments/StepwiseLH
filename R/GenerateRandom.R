@@ -1,4 +1,18 @@
+#' Generate Random Distrbution
+#'
+#' Generates random deviates. \code{aDist} determinines normal or lognormal
+#' distribution of the random generation function.
+#'
+#' @param n_iter Number of oberservations
+#' @param aDist Type of Distribution: Normal or Lognormal.
+#' @param par1 Vector of Means
+#' @param par2 Vector of Standard Deviation
+#'
+#' @seealso \code{\link[truncnorm]{rtruncnorm}}
+#' @seealso \code{\link[stats]{rlnorm}}
+#'
 #' @import truncnorm
+#' @importFrom stats rlnorm
 #' @export
 
 GenerateRandom <- function(n_iter, aDist, par1, par2){
