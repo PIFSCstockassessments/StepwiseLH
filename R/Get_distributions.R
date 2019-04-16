@@ -4,6 +4,7 @@
 #' @import data.table
 #' @import truncnorm
 #' @import MASS
+#' @importFrom graphics hist par
 #' @export
 
 Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method=0.04, n_iter=5000){

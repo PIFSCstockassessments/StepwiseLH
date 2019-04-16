@@ -12,6 +12,7 @@
 #' @seealso \code{\link[stats]{rlnorm}}
 #'
 #' @import truncnorm
+#' @importFrom stats rlnorm
 #' @export
 
 GenerateRandom <- function(n_iter, aDist, par1, par2){
