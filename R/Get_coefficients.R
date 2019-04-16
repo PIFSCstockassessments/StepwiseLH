@@ -1,3 +1,10 @@
+#' Get coefficients
+#'
+#' Retrieves Life History values for Family
+#'
+#' @param Family Taxaon Name
+#' @param Lmax.mean Mean of 'largest locally measured length'.
+#'
 #' @export
 Get_coefficients <- function(Family, Lmax.mean){
 
