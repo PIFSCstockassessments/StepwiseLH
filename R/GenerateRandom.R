@@ -11,10 +11,8 @@
 #' @seealso \code{\link[truncnorm]{rtruncnorm}}
 #' @seealso \code{\link[stats]{rlnorm}}
 #'
-#' @import truncnorm
+#' @importForm truncnorm rtruncnorm
 #' @importFrom stats rlnorm
-#' @export
-
 GenerateRandom <- function(n_iter, aDist, par1, par2){
 
   #require(truncnorm)
