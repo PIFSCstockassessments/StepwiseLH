@@ -13,7 +13,7 @@ install_github("PIFSCstockassessments/StepwiseLH")
 
 # Usage
 
-`StepwiseLH`'s primary method is `Get_distributions`. [Short description]. `Lmax` is the 99th percentile of length in a typical survey or catch dataset.
+`StepwiseLH`'s primary method is `Get_distributions`. *TODO: [Short description]*. `Lmax` is the 99th percentile of length in a typical survey or catch dataset.
 
 
 The following example generates random distributions of _Acanthuridae_ (Surgeonfishes) governed by Life History parameters, `Lmax` mean and standard deviations, as well as surviorship at max age.
@@ -47,7 +47,7 @@ Results were stored as a **data.table** object named `Data`:
 
 ### Available families
 
-These are list of available values in `Get_distributions` parameter `Family`.
+The following `Family` values available for `Get_distributions`:
 
 
 | Family             | Common Name                      |
@@ -63,7 +63,7 @@ These are list of available values in `Get_distributions` parameter `Family`.
 | *Haemulidae* [1]   | Grunts/sweetlips                 |
 | *Shark* [1]        | Carcharinids and other families  |
 
-[1] = The following Family Life History parameters are experimental: The come from unpublished sorces, subject to peer review, and/or non-public resources. 
+[1] The following Family Life History parameters are experimental: Ther are from unpublished sources, and subject to peer review. 
 
 ## References 
 TODO
