@@ -21,7 +21,7 @@ The following example generates random distributions of _Acanthuridae_ (Surgeonf
 library(StepwiseLH)
 Data <- Get_distributions(Family="Acanthuridae", Lmax.mean=600, Lmax.SD=50, M_method=0.04)
 ```
-Results were stored as a **data.table** object named `Data`:
+`Data` is the **data.table** object returned from `Get_distributions`:
 ```
       Lmax            Linf             K                 A0            Lmat            Amat              M                Amax       
  Min.   :401.2   Min.   :356.1   Min.   :0.05388   Min.   :-0.6   Min.   :250.4   Min.   : 0.409   Min.   :0.01252   Min.   : 16.55  
