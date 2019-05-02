@@ -5,7 +5,7 @@
 \title{Just a test message}
 \usage{
 Get_distributions(Family_Input, Lmax.mean, Lmax.SD, M_method = 0.04,
-  n_iter = 5000)
+  n_iter = 5000, dist_summary = TRUE)
 }
 \arguments{
 \item{Family_Input}{Selection of available family taxon.}
@@ -17,6 +17,8 @@ Get_distributions(Family_Input, Lmax.mean, Lmax.SD, M_method = 0.04,
 \item{M_method}{Select how M is calculated. Default is 0.04.}
 
 \item{n_iter}{Number of obervations. Default is 5000.}
+
+\item{dist_summary}{Option for descriptive statistics and graphs. Default is TRUE.}
 }
 \description{
 Just a test message

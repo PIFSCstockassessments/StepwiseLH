@@ -41,8 +41,7 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c(-6.928236e-01, 3.050065e-03))
     Mat_error<- 0.102
   }
-
-  if(Family=="Carangidae")
+  else if(Family=="Carangidae")
   {
 
     if(Lmax.mean<=900){
@@ -86,8 +85,7 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c( -0.6115146, 0.000859941))
     Mat_error<- 43.96
   }
-
-  if(Family=="Lethrinidae")
+  else if(Family=="Lethrinidae")
   {
 
     LinfFunc  <- "Linear"
@@ -122,8 +120,7 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c( -1.0156029, 0.0028603607))
     Mat_error<- 21.3
   }
-
-  if(Family=="Lutjanidae")
+  else if(Family=="Lutjanidae")
   {
     if(Lmax.mean<=500){
       LinfFunc  <- "Linear"
@@ -166,8 +163,7 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c( -0.853091438, 2.161344e-03))
     Mat_error<- 0.148013
   }
-
-  if(Family=="Mullidae")
+  else if(Family=="Mullidae")
   {
     LinfFunc  <- "Linear"
     LinfDist  <- "Normal"
@@ -198,8 +194,7 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c( -1.135673725, 0.004357041))
     Mat_error<- 22.09
   }
-
-  if(Family=="Scaridae")
+  else if(Family=="Scaridae")
   {
     LinfFunc  <- "Linear"
     LinfDist  <- "Normal"
@@ -233,8 +228,7 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c( -0.4250234, 0.00114699))
     Mat_error<- 22
   }
-
-  if(Family=="Shark")
+  else if(Family=="Shark")
   {
     LinfFunc  <- "Linear"
     LinfDist  <- "Normal"
@@ -268,8 +262,7 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c(  -3.556020473, 0.002846484))
     Mat_error<- 0.121883
   }
-
-  if(Family=="Serranidae")
+  else if(Family=="Serranidae")
   {
     LinfFunc  <- "Linear"
     LinfDist  <- "Normal"
@@ -303,8 +296,7 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c( -0.6600851695, 0.0008989627))
     Mat_error<- 62.136809
   }
-
-  if(Family=="Haemulidae")
+  else if(Family=="Haemulidae")
   {
     LinfFunc  <- "Linear"
     LinfDist  <- "Normal"
@@ -338,8 +330,7 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c(  -3.094601, 0.007869311))
     Mat_error<- 31.565864
   }
-
-  if(Family=="Labridae")
+  else if(Family=="Labridae")
   {
     LinfFunc  <- "Linear"
     LinfDist  <- "Normal"
@@ -374,6 +365,9 @@ Get_coefficients <- function(Family, Lmax.mean){
     Mat_cov  <- rbind(c(1128.25373293 ,-2.544039),
                       c(  -2.544039, 0.007371996))
     Mat_error<- 0.27573
+  }
+  else{
+    stop("Invalid Family value")
   }
 
 
