@@ -2,7 +2,7 @@
 % Please edit documentation in R/Get_distributions.R
 \name{Get_distributions}
 \alias{Get_distributions}
-\title{Just a test message}
+\title{Life history probability distributions from an estimate of max length.}
 \usage{
 Get_distributions(Family_Input, Lmax.mean, Lmax.SD, M_method = 0.04,
   n_iter = 5000, dist_summary = TRUE)
@@ -14,12 +14,14 @@ Get_distributions(Family_Input, Lmax.mean, Lmax.SD, M_method = 0.04,
 
 \item{Lmax.SD}{Standard Deviation of 'largest locally measured length'.}
 
-\item{M_method}{Select how M is calculated. Default is 0.04.}
+\item{M_method}{Select how 'Survivorship at max age' is calculated. Default is 0.04.}
 
 \item{n_iter}{Number of obervations. Default is 5000.}
 
 \item{dist_summary}{Option for descriptive statistics and graphs. Default is TRUE.}
 }
 \description{
-Just a test message
+Returns random distributions of a famliy taxon governed by Life History parameters,
+Lmax, mean, standard deviations, as well as surviorship at max age. Lmax is the 99th percentile
+of length in a typical survey or catch dataset.
 }

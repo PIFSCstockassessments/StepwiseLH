@@ -1,11 +1,13 @@
-#' Just a test message
+#' Life history probability distributions from an estimate of max length.
 #'
-#'
+#' Returns random distributions of a famliy taxon governed by Life History parameters,
+#' Lmax, mean, standard deviations, as well as surviorship at max age. Lmax is the 99th percentile
+#' of length in a typical survey or catch dataset.
 #'
 #' @param Family_Input Selection of available family taxon.
 #' @param Lmax.mean Mean of 'largest locally measured length'.
 #' @param Lmax.SD Standard Deviation of 'largest locally measured length'.
-#' @param M_method Select how M is calculated. Default is 0.04.
+#' @param M_method Select how 'Survivorship at max age' is calculated. Default is 0.04.
 #' @param n_iter Number of obervations. Default is 5000.
 #' @param dist_summary Option for descriptive statistics and graphs. Default is TRUE.
 #'
