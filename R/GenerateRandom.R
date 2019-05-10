@@ -8,8 +8,8 @@
 #' @param par1 Vector of Means
 #' @param par2 Vector of Standard Deviation
 #'
-#' @seealso \code{\link[truncnorm]{rtruncnorm}}
-#' @seealso \code{\link[stats]{rlnorm}}
+#' @seealso \code{\link[truncnorm]{dtruncnorm}}
+#' @seealso \code{\link[stats]{Lognormal}}
 #'
 #' @importFrom truncnorm rtruncnorm
 #' @importFrom stats rlnorm
