@@ -1,5 +1,5 @@
 Package: StepwiseLH
-Title: Generate life history probability distributions from an estimate of maximum length
+Title: Generate life history probability distributions from an estimate of max length
 Version: 0.9.0
 Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
