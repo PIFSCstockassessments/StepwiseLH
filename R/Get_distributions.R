@@ -18,7 +18,7 @@
 Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method=0.04, n_iter=5000, dist_summary=TRUE){
 
   if(is.numeric(Family_Input)){
-  Family_Names <- c("Acanthuridae","Carangidae","Haemulidae","Labridae","Lethrinidae","Lutjanidae","Mullidae","Scaridae","Serranidae","Shark")
+  Family_Names <- c("Acanthuridae","Carangidae","Lethrinidae","Lutjanidae","Mullidae","Scaridae")
   Family       <- Family_Names[Family_Input]
   } else {Family <- Family_Input}
 
@@ -32,7 +32,7 @@ Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method=0.04, n
     Lmax[i] <- rtruncnorm(1,a=0,b=Inf,Lmax.mean,Lmax.SD)
     Linf[i] <- Get_randomLH(coefs$LinfFunc,coefs$LinfDist,coefs$Linf_coef,coefs$Linf_cov,coefs$Linf_error, Lmax[i])
     K[i]    <- Get_randomLH(coefs$KFunc,coefs$KDist,coefs$K_coef,coefs$K_cov,coefs$K_error, Linf[i])
-    A0[i]   <- coefs$A0_coef[1]
+    A0[i]   <- coefs$A0_coef[1]s
     M[i]    <- Get_randomLH(coefs$MFunc,coefs$MDist,coefs$M_coef,coefs$M_cov,coefs$M_error, K[i], Lmax[i])
     Amax[i] <- -log(0.05)/M[i]
 
