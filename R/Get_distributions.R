@@ -1,6 +1,6 @@
-#' Just a test message
+#' Family taxon distributions
 #'
-#'
+#' Returns Life History distributions based on a given Family taxon.
 #'
 #' @param Family_Input Selection of available family taxon.
 #' @param Lmax.mean Mean of 'largest locally measured length'.
