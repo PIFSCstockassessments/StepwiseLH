@@ -1,6 +1,6 @@
 #' Family taxon distributions
 #'
-#' Returns Life History distributions based on a given Family taxon.
+#' Returns Life History distributions based on a selected Family taxon.
 #'
 #' @param Family_Input Selection of available family taxon.
 #' @param Lmax.mean Mean of 'largest locally measured length'.
@@ -32,7 +32,7 @@ Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method=0.04, n
     Lmax[i] <- rtruncnorm(1,a=0,b=Inf,Lmax.mean,Lmax.SD)
     Linf[i] <- Get_randomLH(coefs$LinfFunc,coefs$LinfDist,coefs$Linf_coef,coefs$Linf_cov,coefs$Linf_error, Lmax[i])
     K[i]    <- Get_randomLH(coefs$KFunc,coefs$KDist,coefs$K_coef,coefs$K_cov,coefs$K_error, Linf[i])
-    A0[i]   <- coefs$A0_coef[1]s
+    A0[i]   <- coefs$A0_coef[1]
     M[i]    <- Get_randomLH(coefs$MFunc,coefs$MDist,coefs$M_coef,coefs$M_cov,coefs$M_error, K[i], Lmax[i])
     Amax[i] <- -log(0.05)/M[i]
 
