@@ -2,7 +2,7 @@
 % Please edit documentation in R/Get_distributions.R
 \name{Get_distributions}
 \alias{Get_distributions}
-\title{Just a test message}
+\title{Family taxon distributions}
 \usage{
 Get_distributions(Family_Input, Lmax.mean, Lmax.SD, M_method = 0.04,
   n_iter = 5000, dist_summary = TRUE)
@@ -21,5 +21,5 @@ Get_distributions(Family_Input, Lmax.mean, Lmax.SD, M_method = 0.04,
 \item{dist_summary}{Option for descriptive statistics and graphs. Default is TRUE.}
 }
 \description{
-Just a test message
+Returns Life History distributions based on a selected Family taxon.
 }

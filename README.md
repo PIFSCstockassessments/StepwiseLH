@@ -58,12 +58,6 @@ The following `Family` values available for `Get_distributions`:
 | `Lutjanidae`       | Snappers                         |
 | `Mullidae`         | Goatfishes                       |
 | `Scaridae`         | Parrotfishes                     |
-| *Serranidae* [1]   | Groupers                         |
-| *Labridae* [1]     | Wrasses                          |
-| *Haemulidae* [1]   | Grunts/sweetlips                 |
-| *Shark* [1]        | Carcharinids and other families  |
-
-[1] The following Family Life History parameters are experimental: Ther are from unpublished sources, and subject to peer review. 
 
 ## References 
 TODO

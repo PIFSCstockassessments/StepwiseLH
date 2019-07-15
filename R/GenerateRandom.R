@@ -13,6 +13,7 @@
 #'
 #' @importFrom truncnorm rtruncnorm
 #' @importFrom stats rlnorm
+#' @export
 GenerateRandom <- function(n_iter, aDist, par1, par2){
 
   #require(truncnorm)
