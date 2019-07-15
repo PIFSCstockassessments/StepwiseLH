@@ -48,7 +48,10 @@ Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method=0.04, n
     }
 
     LLambda <- Linf[i]*(1-exp(-K[i]*(Amax[i]-A0[i])))
+    repeat{
     Lmat[i] <- Get_randomLH(coefs$MatFunc,coefs$MatDist,coefs$Mat_coef,coefs$Mat_cov,coefs$Mat_error, LLambda)
+    if(Lmat[i]<Linf[i]) break
+    }
     Amat[i] <- A0[i]-1/K[i]*log(1-Lmat[i]/Linf[i])
 
   }
