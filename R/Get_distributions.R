@@ -31,9 +31,15 @@ Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method=0.04, n
   {
     Lmax[i] <- rtruncnorm(1,a=0,b=Inf,Lmax.mean,Lmax.SD)
     Linf[i] <- Get_randomLH(coefs$LinfFunc,coefs$LinfDist,coefs$Linf_coef,coefs$Linf_cov,coefs$Linf_error, Lmax[i])
+    repeat{
     K[i]    <- Get_randomLH(coefs$KFunc,coefs$KDist,coefs$K_coef,coefs$K_cov,coefs$K_error, Linf[i])
+    if(K[i]<=2) break
+    }
     A0[i]   <- coefs$A0_coef[1]
+    repeat{
     M[i]    <- Get_randomLH(coefs$MFunc,coefs$MDist,coefs$M_coef,coefs$M_cov,coefs$M_error, K[i], Lmax[i])
+    if(M[i]<=2) break
+    }
     Amax[i] <- -log(0.05)/M[i]
 
     # Select how M is calculated
@@ -50,7 +56,6 @@ Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method=0.04, n
     LLambda <- Linf[i]*(1-exp(-K[i]*(Amax[i]-A0[i])))
     repeat{
     Lmat[i] <- Get_randomLH(coefs$MatFunc,coefs$MatDist,coefs$Mat_coef,coefs$Mat_cov,coefs$Mat_error, LLambda)
-
     if(Lmat[i]<Linf[i]&!is.na(Lmat[i])) break
     }
     Amat[i] <- A0[i]-1/K[i]*log(1-Lmat[i]/Linf[i])
