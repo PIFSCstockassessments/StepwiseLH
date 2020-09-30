@@ -26,7 +26,7 @@ install_github("PIFSCstockassessments/StepwiseLH")
 
   `n_iter` is the number of Monte Carlo iterations used to generate output distributions. Default value is 5000.
 
-  'dist_summary' is a true/false boolean to specify if summary statistics are generated. Default value is True.
+  `dist_summary` is a true/false boolean to specify if summary statistics are generated. Default value is True.
 
 The following example generates random distributions of _Acanthuridae_ (Surgeonfishes) with a `Lmax` mean and associated standard deviations, as well as surviorship at max age equal to 0.04.
 ```
