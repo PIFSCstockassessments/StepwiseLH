@@ -18,7 +18,7 @@
 Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method=0.04, n_iter=5000, dist_summary=TRUE){
 
   if(is.numeric(Family_Input)){
-  Family_Names <- c("Acanthuridae","Carangidae","Lethrinidae","Lutjanidae","Mullidae","Scaridae")
+  Family_Names <- c("Acanthuridae","Carangidae","Haemulidae","Labridae","Lethrinidae","Lutjanidae","Mullidae","Scaridae","Serranidae","Shark")
   Family       <- Family_Names[Family_Input]
   } else {Family <- Family_Input}
 
