@@ -81,10 +81,8 @@ This tool is also built and tested for species in warmer sea surface temperature
 
 
 ## References 
-Nadon, MO and Ault, JS (2016) A stepwise stochastic simulation approach to estimate life history parameters 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for data-poor fisheries. Can. J. Fish. Aqua. Sci. 73:1874-1884.
+Nadon, MO and Ault, JS (2016) A stepwise stochastic simulation approach to estimate life history parameters for data-poor fisheries. Can. J. Fish. Aqua. Sci. 73:1874-1884.
 
-Erickson, K and Nadon, MO (in prep) An extension of the stepwise stochastic simulation approach for estimating missing life history parameters
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for sharks, groupers, and other taxa.
+Erickson, K and Nadon, MO (in prep) An extension of the stepwise stochastic simulation approach for estimating missing life history parameters for sharks, groupers, and other taxa.
 
 
