@@ -15,7 +15,7 @@ install_github("PIFSCstockassessments/StepwiseLH")
 
 `StepwiseLH`'s primary method is `Get_distributions` with requires the following parameters:
 
-  `Family` is the taxon from which we want life history parameter estimates (see table below for available values).
+  `Family` is the taxon for which life history parameter estimates will be generated (see table below for available values).
 
   `Lmax` is the mean of the normal distribution of 99th percentile of length in a typical survey or catch dataset.
 
@@ -24,7 +24,7 @@ install_github("PIFSCstockassessments/StepwiseLH")
   `M_method` is the model used to generate natural mortality (*M*). If a number is entered, this number will represent survivorship at max age (*S*). If "Then" is entered, *M* will be estimate following
 the Then et al. (2015) method. If "Pauly" is entered, *M* will be estimated using the Pauly et al. (1986) method.
 
-The following example generates random distributions of _Acanthuridae_ (Surgeonfishes) governed by Life History parameters, `Lmax` mean and standard deviations, as well as surviorship at max age.
+The following example generates random distributions of _Acanthuridae_ (Surgeonfishes) with a `Lmax` mean and associated standard deviations, as well as surviorship at max age equal to 0.04.
 ```
 library(StepwiseLH)
 Data <- Get_distributions(Family="Acanthuridae", Lmax.mean=600, Lmax.SD=50, M_method=0.04)
