@@ -28,7 +28,7 @@ install_github("PIFSCstockassessments/StepwiseLH")
 
   `dist_summary` is a true/false boolean to specify if summary statistics are generated. Default value is True.
 
-The following example generates random distributions of _Acanthuridae_ (Surgeonfishes) with a `Lmax` mean and associated standard deviations, as well as surviorship at max age equal to 0.04.
+The following example generates random distributions of _Acanthuridae_ (Surgeonfishes) with a `Lmax` mean and associated standard deviation, as well as surviorship at max age equal to 0.04.
 ```
 library(StepwiseLH)
 Data <- Get_distributions(Family="Acanthuridae", Lmax.mean=600, Lmax.SD=50, M_method=0.04)
@@ -62,18 +62,18 @@ Data <- Get_distributions(Family="Acanthuridae", Lmax.mean=600, Lmax.SD=50, M_me
 The following `Family` values available for `Get_distributions`:
 
 
-| Family             | Common Name                            |
-| ------------------ | ---------------------------------------|
-| `Acanthuridae`     | Surgeonfishes                          |
-| `Carangidae`       | Jacks                                  |
-| `Haemulidae`       | Grunts and sweetlips                   |
-| `Labridae`         | Wrasses                                |
-| `Lethrinidae`      | Emperors                               |
-| `Lutjanidae`       | Snappers                               |
-| `Mullidae`         | Goatfishes                             |
-| `Scaridae`         | Parrotfishes                           |
-| `Serranidae`       | Groupers                               |
-| `Shark`            | Sharks(Lamniforms and Carcharhiniforms)|
+| Family             | Common Name                             |
+| ------------------ | ----------------------------------------|
+| `Acanthuridae`     | Surgeonfishes                           |
+| `Carangidae`       | Jacks                                   |
+| `Haemulidae`       | Grunts and sweetlips                    |
+| `Labridae`         | Wrasses                                 |
+| `Lethrinidae`      | Emperors                                |
+| `Lutjanidae`       | Snappers                                |
+| `Mullidae`         | Goatfishes                              |
+| `Scaridae`         | Parrotfishes                            |
+| `Serranidae`       | Groupers                                |
+| `Shark`            | Sharks (Lamniforms and Carcharhiniforms)|
 
 Note: This tool is untested and not recommended for Anthias (family Serranidae) and small wrasse genera (e.g.,*Cirrhilabrus*, *Halichoeres*, *Labroides*, and *Pseudojuloides*).
 
@@ -82,9 +82,9 @@ This tool is also built and tested for species in warmer sea surface temperature
 
 ## References 
 Nadon, MO and Ault, JS (2016) A stepwise stochastic simulation approach to estimate life history parameters 
-	for data-poor fisheries. Can. J. Fish. Aqua. Sci. 73:1874-1884.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for data-poor fisheries. Can. J. Fish. Aqua. Sci. 73:1874-1884.
 
 Erickson, K and Nadon, MO (in prep) An extension of the stepwise stochastic simulation approach for estimating missing life history parameters
-	for sharks, groupers, and other taxa.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for sharks, groupers, and other taxa.
 
 
