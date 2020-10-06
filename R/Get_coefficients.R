@@ -244,8 +244,8 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c( -2.488918e-01,  3.265766e-02 ))
     K_error  <- 0.470068
 
-    T0Dist   <- "Fixed"
-    T0_coef  <- rbind(-0.6,-999,-999)
+    A0Dist   <- "Fixed"
+    A0_coef  <- rbind(-0.6,-999,-999)
 
     MFunc    <- "Power_2var"
     MDist    <- "Lognormal"
@@ -291,8 +291,8 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c(-6.532990e-02,  1.036076e-02))
     K_error  <- 0.486121
 
-    T0Dist   <- "Fixed"
-    T0_coef  <- rbind(-0.6,-999,-999)
+    A0Dist   <- "Fixed"
+    A0_coef  <- rbind(-0.6,-999,-999)
 
     MFunc    <- "Power_2var"
     MDist    <- "Lognormal"
@@ -326,8 +326,8 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c(-3.040449e-01,  5.001107e-02))
     K_error  <- 0.331187
 
-    T0Dist   <- "Fixed"
-    T0_coef  <- rbind(-0.6,-999,-999)
+    A0Dist   <- "Fixed"
+    A0_coef  <- rbind(-0.6,-999,-999)
 
     MFunc    <- "Power_2var"
     MDist    <- "Lognormal"
@@ -361,8 +361,8 @@ Get_coefficients <- function(Family, Lmax.mean){
                       c(-2.624310e-01,  4.526587e-02))
     K_error  <-  0.49735
 
-    T0Dist   <- "Fixed"
-    T0_coef  <- rbind(-0.6,-999,-999)
+    A0Dist   <- "Fixed"
+    A0_coef  <- rbind(-0.6,-999,-999)
 
     MFunc    <- "Power_2var"
     MDist    <- "Lognormal"
