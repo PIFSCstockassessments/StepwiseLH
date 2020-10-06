@@ -4,8 +4,14 @@
 \alias{Get_distributions}
 \title{Family taxon distributions}
 \usage{
-Get_distributions(Family_Input, Lmax.mean, Lmax.SD, M_method = 0.04,
-  n_iter = 5000, dist_summary = TRUE)
+Get_distributions(
+  Family_Input,
+  Lmax.mean,
+  Lmax.SD,
+  M_method = 0.04,
+  n_iter = 5000,
+  dist_summary = TRUE
+)
 }
 \arguments{
 \item{Family_Input}{Selection of available family taxon.}

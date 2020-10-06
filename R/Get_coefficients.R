@@ -232,122 +232,137 @@ Get_coefficients <- function(Family, Lmax.mean){
   {
     LinfFunc  <- "Linear"
     LinfDist  <- "Normal"
-    Linf_coef <- rbind(74.508188,1.02818)
-    Linf_cov  <- rbind(c(8241.937584   ,-2.920164638),
-                       c(  -2.920164638, 0.001335099))
-    Linf_error<- 219.576955
+    Linf_coef <- rbind( 95.875451, 1.015686)
+    Linf_cov  <- rbind(c(10129.312210, -3.652304069),
+                       c(  -3.652304,  0.001650315))
+    Linf_error<- 216.924767
 
     KFunc    <- "Power"
     KDist    <- "Lognormal"
-    K_coef   <- rbind(5.505996,-0.9920931)
-    K_cov    <- rbind(c( 1.681207 ,-0.2200081),
-                      c(-0.2200081, 0.02895112))
-    K_error  <- 0.4917783
+    K_coef   <- rbind( 6.767377, -1.15356)
+    K_cov    <- rbind(c( 1.906471e+00, -2.488918e-01),
+                      c( -2.488918e-01,  3.265766e-02 ))
+    K_error  <- 0.470068
 
-    A0Dist   <- "Fixed"
-    A0_coef  <- rbind(-0.6,-999,-999)
+    T0Dist   <- "Fixed"
+    T0_coef  <- rbind(-0.6,-999,-999)
 
     MFunc    <- "Power_2var"
     MDist    <- "Lognormal"
-    M_coef   <- rbind(3.772445,0.139914,-0.697556)
-    M_cov    <- rbind(c( 0.6589237 ,-0.03649175 ,-0.09690443),
-                      c(-0.03649175, 0.008354179, 0.00709543),
-                      c(-0.09690443, 0.00709543 , 0.01477145))
-    M_error  <- 0.267889
+    M_coef   <- rbind(3.650789,  0.106074 ,-0.685360 )
+    M_cov    <- rbind(c( 5.864255e-01, -3.364353e-02, -8.623853e-02),
+                      c(-3.364353e-02,  5.908050e-03,  6.026043e-03),
+                      c(-8.623853e-02,  6.026043e-03,  1.300763e-02))
+    M_error  <- 0.209512
 
     MatFunc  <- "Linear"
     MatDist  <- "Lognormal"
-    Mat_coef <- rbind(39.991995,0.749496)
-    Mat_cov  <- rbind(c(5256.470476   ,-3.556020473),
-                      c(  -3.556020473, 0.002846484))
-    Mat_error<- 0.121883
+    Mat_coef <- rbind(-17.428546,0.790944)
+    Mat_cov  <- rbind(c(5084.7081777, -3.3264733624),
+                      c(-3.3264734,  0.0026467719))
+    Mat_error<- 0.121243
   }
+
   else if(Family=="Serranidae")
   {
-    LinfFunc  <- "Linear"
-    LinfDist  <- "Normal"
-    Linf_coef <- rbind(16.421,0.906)
-    Linf_cov  <- rbind(c(549.5694787  ,-0.586293701),
-                       c( -0.586293701, 0.000840065))
-    Linf_error<- 88.643
+    if(Lmax.mean<1000){
+      LinfFunc  <- "Linear"
+      LinfDist  <- "Normal"
+      Linf_coef <- rbind(-19.688783,0.971619)
+      Linf_cov  <- rbind(c(552.4685260, -0.900164761),
+                         c( -0.900164761,  0.001723969))
+      Linf_error<- 60.906012
+
+    }else{
+
+      LinfFunc  <- "Linear"
+      LinfDist  <- "Normal"
+      Linf_coef <- rbind(5.106554,0.916903)
+      Linf_cov  <- rbind(c(15179.67650, -10.831167618),
+                         c( -10.831167618,  0.008135535))
+      Linf_error<- 95.362020
+    }
+
 
     KFunc    <- "Power"
     KDist    <- "Lognormal"
-    K_coef   <- rbind(3.516075,-0.803138)
-    K_cov    <- rbind(c( 0.4253909 ,-0.06669836),
-                      c(-0.06669836, 0.0105578))
-    K_error  <- 0.479123
+    K_coef   <- rbind(3.693584,-0.830728)
+    K_cov    <- rbind(c( 4.160128e-01, -6.532990e-02),
+                      c(-6.532990e-02,  1.036076e-02))
+    K_error  <- 0.486121
 
-    A0Dist   <- "Fixed"
-    A0_coef  <- rbind(-0.6,-999,-999)
+    T0Dist   <- "Fixed"
+    T0_coef  <- rbind(-0.6,-999,-999)
 
     MFunc    <- "Power_2var"
     MDist    <- "Lognormal"
-    M_coef   <- rbind(0.713543,0.217078,-0.357565)
-    M_cov    <- rbind(c( 0.3519742 ,-0.02449899 ,-0.06053641),
-                      c(-0.02449899, 0.007134709, 0.005572682),
-                      c(-0.06053641, 0.005572682, 0.01079999))
-    M_error  <- 0.32839
+    M_coef   <- rbind(0.734471,0.227323,-0.361122)
+    M_cov    <- rbind(c( 4.048165e-01, -2.956873e-02, -7.002925e-02),
+                      c(-2.956873e-02,  7.741958e-03,  6.504923e-03),
+                      c(-7.002925e-02,  6.504923e-03,  1.251341e-02))
+    M_error  <- 0.347489
 
     MatFunc  <- "Linear"
-    MatDist  <- "Normal"
-    Mat_coef <- rbind(61.19186,0.487651)
-    Mat_cov  <- rbind(c(609.2499949   ,-0.6600851695),
-                      c( -0.6600851695, 0.0008989627))
-    Mat_error<- 62.136809
+    MatDist  <- "Lognormal"
+    Mat_coef <- rbind(53.621460,0.489300)
+    Mat_cov  <- rbind(c(193.241099294, -3.19568366e-01),
+                      c( -0.319568366,  7.085048e-04))
+    Mat_error<- 0.130818
   }
+
   else if(Family=="Haemulidae")
   {
     LinfFunc  <- "Linear"
     LinfDist  <- "Normal"
-    Linf_coef <- rbind(-38.48345,1.08116)
-    Linf_cov  <- rbind(c(2737.625959  ,-5.16729362),
-                       c(  -5.16729362, 0.01111812))
-    Linf_error<- 63.50251
+    Linf_coef <- rbind(-29.253697,1.076310)
+    Linf_cov  <- rbind(c(2170.858118, -4.149686007),
+                       c(  -4.149686007,  0.008921546))
+    Linf_error<- 53.527065
 
     KFunc    <- "Power"
     KDist    <- "Lognormal"
-    K_coef   <- rbind(4.215208,-0.8694549)
-    K_cov    <- rbind(c( 1.856475 ,-0.3040749),
-                      c(-0.3040749, 0.05001601))
-    K_error  <- 0.3311729
+    K_coef   <- rbind(4.214392 ,-0.869316)
+    K_cov    <- rbind(c( 1.856291e+00, -3.040449e-01),
+                      c(-3.040449e-01,  5.001107e-02))
+    K_error  <- 0.331187
 
-    A0Dist   <- "Fixed"
-    A0_coef  <- rbind(-0.6,-999,-999)
+    T0Dist   <- "Fixed"
+    T0_coef  <- rbind(-0.6,-999,-999)
 
     MFunc    <- "Power_2var"
     MDist    <- "Lognormal"
-    M_coef   <- rbind(5.812223,0.116474,-1.230305)
-    M_cov    <- rbind(c( 7.3965789775,-0.443710116,-1.304127),
-                      c(-0.4437101165, 0.105205181, 0.09031171),
-                      c(-1.3041269954, 0.090311707, 0.2322123))
-    M_error  <- 0.386752
+    M_coef   <- rbind(6.105017,0.110339,-1.281409)
+    M_cov    <- rbind(c( 8.047333e+00, -4.736945e-01, -1.419014e+00),
+                      c(-4.736945e-01,  1.062632e-01,  9.558390e-02),
+                      c(-1.419014e+00,  9.558390e-02,  2.524936e-01))
+    M_error  <-  0.386746
 
     MatFunc  <- "Linear"
     MatDist  <- "Normal"
-    Mat_coef <- rbind(106.287966,0.490394)
+    Mat_coef <- rbind(101.101373,0.501735)
     Mat_cov  <- rbind(c(1416.231824,-3.094600577),
                       c(  -3.094601, 0.007869311))
-    Mat_error<- 31.565864
+    Mat_error<- 31.453252
   }
+
   else if(Family=="Labridae")
   {
     LinfFunc  <- "Linear"
     LinfDist  <- "Normal"
-    Linf_coef <- rbind(-61.939519,1.078769)
-    Linf_cov  <- rbind(c(985.566489,-1.681084322),
-                       c( -1.681084, 0.003810872))
-    Linf_error<- 54.107324
+    Linf_coef <- rbind(-61.345571,1.077742)
+    Linf_cov  <- rbind(c(976.288023, -1.665262309),
+                       c( -1.665262309,  0.003774662))
+    Linf_error<- 53.842027
 
     KFunc    <- "Power"
     KDist    <- "Lognormal"
-    K_coef   <- rbind(4.1471,-0.9355539)
-    K_cov    <- rbind(c( 1.542069 ,-0.2624309),
-                      c(-0.2624309, 0.04526586))
-    K_error  <- 0.4973524
+    K_coef   <- rbind(4.14710,-0.93555)
+    K_cov    <- rbind(c( 1.542069e+00, -2.624310e-01),
+                      c(-2.624310e-01,  4.526587e-02))
+    K_error  <-  0.49735
 
-    A0Dist   <- "Fixed"
-    A0_coef  <- rbind(-0.6,-999,-999)
+    T0Dist   <- "Fixed"
+    T0_coef  <- rbind(-0.6,-999,-999)
 
     MFunc    <- "Power_2var"
     MDist    <- "Lognormal"
@@ -360,8 +375,6 @@ Get_coefficients <- function(Family, Lmax.mean){
     MatFunc  <- "Linear"
     MatDist  <- "Lognormal"
     Mat_coef <- rbind(70.00207,0.2741)
-    #Mat_cov  <- rbind(c(1128.25373293 ,-2.544039347),
-    #                  c(  -2.544039347, 0.000371996))
     Mat_cov  <- rbind(c(1128.25373293 ,-2.544039),
                       c(  -2.544039, 0.007371996))
     Mat_error<- 0.27573
