@@ -1,5 +1,5 @@
 # StepwiseLH
-Package to generate life history probability distributions from an estimate of maximum length.
+This package generates life history parameter probability distributions based on taxonomic group and an estimate of maximum length.
 
 ## GitHub Disclaimer
 This repository is a scientific product and is not official communication of the National Oceanic and Atmospheric Administration, or the United States Department of Commerce. All NOAA GitHub project code is provided on an ‘as is’ basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by servicemark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
@@ -17,7 +17,7 @@ install_github("PIFSCstockassessments/StepwiseLH")
 
   `Family` is the taxon for which life history parameter estimates will be generated (see table below for available values).
 
-  `Lmax` is the mean of the normal distribution of 99th percentile of length in a typical survey or catch dataset.
+  `Lmax` is the mean of the normal distribution of 99th percentile of length in a typical survey or catch dataset (total length).
 
   `Lmax.SD` is the standard deviation of the normal distribution of 99th percentile of length.
 
@@ -77,12 +77,12 @@ The following `Family` values available for `Get_distributions`:
 
 Note: This tool is untested and not recommended for Anthias (family Serranidae) and small wrasse genera (e.g.,*Cirrhilabrus*, *Halichoeres*, *Labroides*, and *Pseudojuloides*).
 
-This tool is also built and tested for species in warmer sea surface temperature (i.e. >20C).
+This tool is also built and tested for species in warmer sea surface temperature (i.e. Annual average >20C).
 
 
 ## References 
 Nadon, MO and Ault, JS (2016) A stepwise stochastic simulation approach to estimate life history parameters for data- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;poor fisheries. Can. J. Fish. Aqua. Sci. 73:1874-1884.
 
-Erickson, K and Nadon, MO (in prep) An extension of the stepwise stochastic simulation approach for estimating &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;missing life history parameters for sharks, groupers, and other taxa.
+Erickson, K and Nadon, MO (2021) An extension of the stepwise stochastic simulation approach for estimating distributions of missing life history parameter values for sharks, groupers, and other taxa. Fish. Bull. 119(1).
 
 
