@@ -1,8 +1,8 @@
 Package: StepwiseLH
-Title: What the Package Does (one line, title case)
-Version: 1.1
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Title: Generate life history parameter probability distributions.
+Version: 1.21
+Authors@R: person("Marc", "Nadon", email = "marc.nadon@noaa.gov", role = c("aut", "cre"))
+Description: This package generates life history parameter probability distributions based on taxonomic group and an estimate of maximum length.
 Depends: R (>= 3.4.0)
 Imports:
   methods,
