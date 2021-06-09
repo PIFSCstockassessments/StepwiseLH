@@ -17,7 +17,7 @@ install_github("PIFSCstockassessments/StepwiseLH")
 
   `Family` is the taxon for which life history parameter estimates will be generated (see table below for available values).
 
-  `Lmax` is the mean of the normal distribution of 99th percentile of length in a typical survey or catch dataset (total length).
+  `Lmax` is the mean of the normal distribution of 99th percentile of length in a typical survey or catch dataset (total length, mm).
 
   `Lmax.SD` is the standard deviation of the normal distribution of 99th percentile of length.
 
