@@ -316,7 +316,7 @@ Get_coefficients <- function(Family, Lmax.mean){
     LinfDist  <- "Normal"
     Linf_coef <- rbind(-29.253697,1.076310)
     Linf_cov  <- rbind(c(2170.858118, -4.149686007),
-                       c(  -4.149686007,  0.008921546))
+                       c(  -4.149686007, 0.008921546))
     Linf_error<- 53.527065
 
     KFunc    <- "Power"
