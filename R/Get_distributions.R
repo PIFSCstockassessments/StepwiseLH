@@ -15,7 +15,7 @@
 #' @importFrom graphics hist par
 #' @export
 
-Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method=0.04, n_iter=5000, dist_summary=TRUE){
+Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method="Hamel_Cope_2022", n_iter=5000, dist_summary=TRUE){
 
   if(is.numeric(Family_Input)){
   Family_Names <- c("Acanthuridae","Carangidae","Haemulidae","Labridae","Lethrinidae","Lutjanidae","Mullidae","Scaridae","Serranidae","Shark")
@@ -49,6 +49,8 @@ Get_distributions <- function(Family_Input, Lmax.mean, Lmax.SD, M_method=0.04, n
       M[i] <- 4.899*Amax[i]^-0.916          # new equation from Then et al. (2014)
     }else if(M_method=="Pauly_Then_2014") {
       M[i] <- 4.118*K[i]^0.73*Linf[i]^-0.33 # updated Pauly (1980) equation from Then et al. (2014)
+    }else if(M_method=="Hamel_Cope_2022") {
+      M[i] <- 5.4/Amax[i]                   # updated Hamel and Cope (2022)
     }else{
       stop("Invalid M method")
     }
