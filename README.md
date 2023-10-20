@@ -21,7 +21,7 @@ install_github("PIFSCstockassessments/StepwiseLH")
 
   `Lmax.SD` is the standard deviation of the normal distribution of 99th percentile of length.
 
-  `M_method` is the model used to generate natural mortality (*M*). Default value is 0.04. If a number is entered, this number will represent survivorship at max age (*S*). If "Then_2014" is entered, *M* will be estimate following
+  `M_method` is the model used to generate natural mortality (*M*). Default value is the Hamel and Cope (2022) equation. If a number is entered, this number will represent survivorship at max age (*S*). If "Then_2014" is entered, *M* will be estimate following
    the Then et al. (2014) method. If "Pauly_Then_2014" is entered, *M* will be estimated using the Then et al. (2014) updated equation of the Pauly et al. (1980) method.
 
   `n_iter` is the number of Monte Carlo iterations used to generate output distributions. Default value is 5000.
